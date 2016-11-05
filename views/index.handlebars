@@ -1,0 +1,53 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4">
+			<figure class="text-center">
+				<img src="assets/img/burger.png" alt="Burger" class="text-center">
+				<figcaption class="text-center"><h1>Eat-Da-Burger!</h1></figcaption>
+			</figure>
+		</div>
+	</div>
+	<div class="row">
+		<ul class="col-md-6 text-center list-unstyled">
+		  {{#each burgers}}
+			{{#unless this.devoured}}
+			<li class="row notdevoured">
+				<div class="col-md-12 text-center">
+					<form action="/update/{{this.id}}?_method=PUT" method="post">
+						<label>{{counter @index}}. {{this.burger_name}}</label>
+						<input type="hidden" name="devoured" value="true">
+						<button>Devour it!</button>
+					</form>
+				</div>
+			</li>
+			{{/unless}}
+		  {{/each}}
+		</ul>
+		<ul class="col-md-6 text-center list-unstyled">
+		  {{#each burgers}}
+			{{#if this.devoured}}
+			<li class="row devoured">
+				<div class="col-md-12 text-center">
+					<p>{{counter @index}}. {{this.burger_name}}</p>
+				</div>
+			</li>
+			{{/if}}
+		  {{/each}}
+		</ul>
+	</div>
+	<div class="row">
+		<form method="post" action="/create" class="col-md-4 col-md-offset-4">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<textarea name="burger"></textarea>
+				</div>
+			</div>
+			<div class="row text-center">	
+				<div class="col-md-12 text-center">
+					<input type="submit" value="Submit"/>
+				</div>
+				<p id="msg">Enter a burger you want to eat. Click the "submit" button.</p>
+			</div>
+		</form>
+	</div>
+</div>

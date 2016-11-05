@@ -1,0 +1,1 @@
+INSERT INTO burgers_db.burgers (burger_name,devoured,`date`) VALUES ('Chicken Bacon Burger',FALSE,'2013-08-05 18:19:03'),('Beef Double Cheese Burger',FALSE,'2015-07-05 13:15:34'),('Happy Meal Burger',TRUE,'2016-08-05 15:19:03');

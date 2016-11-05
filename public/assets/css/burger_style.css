@@ -1,0 +1,36 @@
+html,body
+{
+	background-color: #F6D178;
+	width: 100%;
+	height: 100%;
+}
+
+h1
+{
+	color: #FF0000;
+}
+
+figure img
+{
+	width: 30%;
+	height: 30%;
+}
+
+#msg
+{
+	color: #0000FF;
+}
+
+.devoured
+{
+	border-radius: 10px;
+	background-color: #FFFFFF;
+	margin-bottom: 1%;
+}
+
+.notdevoured
+{
+	border-radius: 10px;
+	background-color: #00DD00;
+	margin-bottom: 1%;
+}
